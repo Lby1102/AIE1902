@@ -5,7 +5,10 @@ ddddocr
 python-dotenv
 openai
 torch
+torchvision
+numpy
 transformers
 gradio
 qwen-vl-utils
 tqdm
+opencv-python
