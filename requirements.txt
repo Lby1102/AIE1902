@@ -7,6 +7,7 @@ openai
 torch
 torchvision
 numpy
+matplotlib
 transformers
 gradio
 qwen-vl-utils

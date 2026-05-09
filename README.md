@@ -20,6 +20,9 @@ AIE1902final/
 │       ├── label.ipynb              # Accurate labeling with Kimi API
 │       └── .env.example             # API key configuration template
 │
+├── data_preprocessing/
+│   └── Binarization.ipynb           # Image binarization: convert to 0/1 matrix, rename by label
+│
 ├── fine-tuning/
 │   ├── translation&fine-tuning.py   # Convert data to Alpaca format
 │   ├── evaluation.py                 # Evaluate fine-tuned model accuracy
@@ -36,6 +39,23 @@ AIE1902final/
 └── requirements.txt                 # All Python dependencies
 ```
 
+## Module Description
+
+### Data Collection Module
+Downloads CAPTCHA images from server and labels them using OCR and LLM APIs.
+
+### Data Preprocessing Module
+Processes raw images for model training:
+- **Binarization**: Converts grayscale images to binary 0/1 matrices using Otsu's thresholding
+- **Renaming**: Renames files based on their label content for easy identification
+- **Deduplication**: Removes duplicate files and standardizes naming to uppercase
+
+### Fine-tuning Module
+Fine-tunes Qwen2.5-VL-3B using LLaMA-Factory with LoRA, includes evaluation and demo.
+
+### CNN Module
+Traditional CNN approach with custom architecture for 4-character recognition.
+
 ## Methodology
 
 ### Approach 1: CNN-based Recognition
@@ -49,14 +69,6 @@ Fine-tuning Qwen2.5-VL-3B using LLaMA-Factory with LoRA (Low-Rank Adaptation):
 - Leverages pre-trained vision-language understanding
 - Efficient fine-tuning with limited computational resources
 - Natural language prompting for flexible inference
-
-## Module Description
-
-**Data Collection Module**: Downloads CAPTCHA images from server and labels them using OCR and LLM APIs.
-
-**Fine-tuning Module**: Fine-tunes Qwen2.5-VL-3B using LLaMA-Factory with LoRA, includes evaluation and demo.
-
-**CNN Module**: Traditional CNN approach with custom architecture for 4-character recognition.
 
 ## Quick Start
 
