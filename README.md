@@ -1,6 +1,13 @@
-# CAPTCHA Recognition
+# CAPTCHA Recognition: A Comparative Study on Noisy Image Recognition
 
-A CAPTCHA recognition system using both CNN and fine-tuned Qwen2.5-VL models.
+## Project Objective
+
+This project aims to explore methods for improving model performance on noisy image recognition tasks. Using CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) as a case study, we conduct a comparative analysis between **CNN-based approaches** and **Vision Language Model fine-tuning** to investigate optimization strategies for handling noisy images.
+
+### Key Research Questions
+- How can models be optimized to better recognize characters in noisy, distorted images?
+- What are the comparative advantages of traditional CNN architectures versus fine-tuned Vision Language Models for this task?
+- Which approach achieves better generalization on challenging CAPTCHA images with noise, distortion, and interference?
 
 ## Project Structure
 
@@ -28,6 +35,20 @@ AIE1902final/
 │
 └── requirements.txt                 # All Python dependencies
 ```
+
+## Methodology
+
+### Approach 1: CNN-based Recognition
+A custom Convolutional Neural Network architecture designed for 4-character CAPTCHA recognition, featuring:
+- Multi-head output for simultaneous character prediction
+- Batch normalization and dropout for regularization
+- Binary thresholding preprocessing for noise reduction
+
+### Approach 2: Vision Language Model Fine-tuning
+Fine-tuning Qwen2.5-VL-3B using LLaMA-Factory with LoRA (Low-Rank Adaptation):
+- Leverages pre-trained vision-language understanding
+- Efficient fine-tuning with limited computational resources
+- Natural language prompting for flexible inference
 
 ## Module Description
 
