@@ -1,0 +1,11 @@
+requests
+svglib
+reportlab
+ddddocr
+python-dotenv
+openai
+torch
+transformers
+gradio
+qwen-vl-utils
+tqdm

@@ -1,0 +1,25 @@
+# Environment files (contain API keys)
+.env
+
+# Claude Code settings
+.claude/
+
+# Large training data files (optional: uncomment if too large)
+# fine-tuning/qwen2.5_data.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Model weights and checkpoints
+*.bin
+*.safetensors
+checkpoint-*
+
+# OS files
+.DS_Store
+Thumbs.db
